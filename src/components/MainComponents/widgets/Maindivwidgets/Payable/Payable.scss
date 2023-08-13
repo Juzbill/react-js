@@ -1,0 +1,45 @@
+.pay-container {
+  width: auto;
+  height: 100%;
+  border-radius: 12px;
+  background-color: #f1f3f5;
+  // background-color: #2f9e44;
+
+  .pay-receivable {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    padding: 10px 5px;
+
+    .pay-receivableIcon {
+      font-size: 36px;
+      color: #e03131;
+      margin-left: 15px;
+    }
+    span {
+      font-size: 20px;
+      margin-left: 10px;
+      color: #636675;
+      font-weight: 500;
+    }
+  }
+  .pay-amount {
+    background-color: #ffa8a8;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 24px;
+      font-weight: 500;
+      color: #39393d;
+      margin-left: 60px;
+    }
+  }
+  .pay-partiesdata {
+    width: 100%;
+    margin-top: 30px;
+    padding: 5px;
+    margin-left: 10px;
+  }
+}

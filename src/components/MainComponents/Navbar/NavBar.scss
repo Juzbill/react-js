@@ -1,0 +1,106 @@
+.navbar {
+  height: 65px;
+  border-bottom: 0.5px solid rgb(231, 228, 228);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+    justify-content: space-between;
+
+    .search {
+      display: flex;
+      width: 50%;
+      align-items: center;
+      margin-left: 15px;
+
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 15px;
+        background-color: transparent;
+      }
+    }
+    .buttons {
+      display: flex;
+      width: 350px;
+      cursor: pointer;
+
+      .sale {
+        width: 125px;
+        padding: 10px;
+        background-color: #ed1a3b;
+        border-radius: 22px;
+
+        span {
+          font-size: 18px;
+          margin-left: 15px;
+          color: seashell;
+          font-weight: 500;
+        }
+      }
+      .purchase {
+        width: 142px;
+        padding: 10px;
+        background-color: #0075e8;
+        border-radius: 22px;
+        margin-left: 20px;
+        span {
+          font-size: 18px;
+          margin-left: 5px;
+          color: seashell;
+          font-weight: 500;
+        }
+      }
+    }
+    hr {
+      width: 40px;
+      color: rgb(48, 38, 38);
+      transform: rotate(90deg);
+      height: 1px;
+    }
+    .items {
+      display: flex;
+      margin-right: 40px;
+      justify-content: center;
+      align-items: center;
+      .item {
+        margin-left: 20px;
+        position: relative;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px #555;
+        }
+        .counter {
+          width: 20px;
+          height: 20px;
+          background-color: blue;
+          border-radius: 50%;
+          color: white;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: -5px;
+          right: -5px;
+        }
+        .icon {
+          font-size: 26px;
+          color: #555;
+        }
+      }
+    }
+  }
+}
