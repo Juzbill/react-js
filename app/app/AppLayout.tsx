@@ -1,6 +1,6 @@
 "use client";
-import AppDrawer from "@/componants/standard/AppDrawer";
-import MyCompany from "@/componants/standard/MYcompany.tsx/Mycompany";
+import AppDrawer from "@/components/standard/AppDrawer";
+import MyCompany from "@/components/standard/MYcompany.tsx/Mycompany";
 import React, { useState } from "react";
 
 const AppLayout = () => {

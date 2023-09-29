@@ -7,9 +7,10 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { FormTextFieldController } from "../FormControllers";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
+import { useState } from "react";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -26,8 +27,14 @@ interface IMyCompanyProps {
 }
 
 export default function MyCompany({ onSubmit, onCancel }: IMyCompanyProps) {
-  const [open, setOpen] = React.useState(true);
-  const [isDetails, setIsDetails] = React.useState(Boolean);
+  const [open, setOpen] = useState(true);
+  const [isDetails, setIsDetails] = useState(Boolean);
+  const [companyData, setCompanyData] = useState({
+    businessName: "",
+    gstin: "",
+    phoneNo: "",
+    emailId: "",
+  });
   const {
     control,
     handleSubmit,
@@ -38,13 +45,17 @@ export default function MyCompany({ onSubmit, onCancel }: IMyCompanyProps) {
   } = useForm({
     mode: "onChange",
     defaultValues: {
-      businessName: "",
-      gstin: "",
-      phoneNo: "",
-      emailId: "",
+      ...companyData,
     },
   });
 
+  const formSubmit = () => {
+    const onSubmit: SubmitHandler<any> = async (formData) => {
+      setCompanyData(formData);
+      handleClose();
+    };
+    handleSubmit(onSubmit)();
+  };
   const handleClose = () => {
     setOpen(false);
     onSubmit();
@@ -152,35 +163,50 @@ export default function MyCompany({ onSubmit, onCancel }: IMyCompanyProps) {
               />
             </div>
           </div>
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "left",
-              alignContent: "left",
-            }}
-            
-          >
+          <div className="w-full flex flex-col justify-start items-start">
             <div>
               <Button variant="text" style={{ textTransform: "none" }}>
                 Business Deatails
               </Button>
             </div>
-            <div>
+            <div className="w-full flex flex-col justify-center gap-4">
               <FormTextFieldController
                 size="small"
-                fieldName="gstin"
+                fieldName="businessAddress"
                 control={control}
-                label="GSTIN"
+                label="Business address"
                 type="text"
                 variant="outlined"
               />
               <FormTextFieldController
                 size="small"
-                fieldName="gstin"
+                fieldName="state"
                 control={control}
-                label="GSTIN"
+                label="State"
+                type="text"
+                variant="outlined"
+              />
+              <FormTextFieldController
+                size="small"
+                fieldName="pincode"
+                control={control}
+                label="Pincode"
+                type="text"
+                variant="outlined"
+              />
+              <FormTextFieldController
+                size="small"
+                fieldName="businessType"
+                control={control}
+                label="Business type"
+                type="text"
+                variant="outlined"
+              />
+              <FormTextFieldController
+                size="small"
+                fieldName="businessCategory"
+                control={control}
+                label="Business category"
                 type="text"
                 variant="outlined"
               />
@@ -188,7 +214,7 @@ export default function MyCompany({ onSubmit, onCancel }: IMyCompanyProps) {
           </div>
         </DialogContent>
         <DialogActions>
-          <Button variant="contained" autoFocus onClick={handleClose}>
+          <Button variant="contained" autoFocus onClick={formSubmit}>
             Save
           </Button>
         </DialogActions>
