@@ -1,0 +1,150 @@
+:root {
+  --big-font: 26px;
+  --med-font: 16px;
+  --small-font: 14px;
+}
+
+.wrapper {
+  width: 488px;
+  height: 280px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.topinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 456px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgcontainer {
+  width: 45px;
+  height: 45px;
+  background-color: #cce0ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sale-text {
+  color: #1a1a1a;
+  font-size: var(--big-font);
+  font-weight: 500;
+  margin-left: 12px;
+}
+.monthfilter {
+  height: 28px;
+  padding: 4px 10px;
+  align-items: center;
+  gap: 4px;
+  margin-top: -12px;
+}
+.filterheader {
+  color: #4d4d4d;
+  font-family: Inter;
+  font-size: 14px;
+  padding: 8px 10px;
+  font-weight: 400;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #e6e6e6;
+  background: #f1f1f1;
+}
+.graphwrapper {
+  display: flex;
+}
+.growth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -75px;
+}
+.left {
+  width: 193px;
+}
+.seperator {
+  width: 1px;
+  height: 169px;
+  background-color: #f1f1f1;
+  margin-top: 40px;
+}
+.totalsalewrapper {
+  width: 121px;
+  height: 58px;
+  margin-top: 65.5px;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.saleamount {
+  color: #1a1a1a;
+  font-size: var(--big-font);
+  font-weight: 700;
+}
+.saletext {
+  width: auto;
+  height: 19px;
+  color: #666;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: 0;
+}
+.growthwrapper {
+  width: 127px;
+  height: 39px;
+  margin-top: 45px;
+  margin-left: 16px;
+  /* background-color: #666; */
+}
+.growth {
+  color: #12b76a;
+}
+.g-value {
+  color: #12b76a;
+  font-family: Inter;
+  font-size: var(--med-font);
+  font-weight: 600;
+}
+.g-text {
+  color: #666;
+  font-family: Inter;
+  font-size: var(--med-font);
+  font-weight: 400;
+}
+.right {
+  width: 293px;
+  margin-left: 17px;
+  margin-top: 16px;
+}
+.grph-w {
+  width: 260px;
+  height: 192px;
+  margin-top: 10px;
+}
+.graph {
+  width: 260px;
+  height: 156px;
+}
+.graph-text {
+  margin-top: 8px;
+  text-align: center;
+}
+.graph-text span {
+  color: #666;
+  font-size: var(--small-font);
+  font-style: normal;
+  font-weight: 400;
+}

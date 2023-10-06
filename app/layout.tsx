@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className=" bg-bg text-primary">{children}</body>
+      <body style={{ background: "#F2F7FF" }}>{children}</body>
     </html>
   );
 }
