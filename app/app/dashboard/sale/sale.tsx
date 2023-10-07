@@ -35,7 +35,7 @@ const Sale: React.FC = () => {
       <div className="graphwrapper">
         <div className="left">
           <div className="totalsalewrapper">
-            <span className="saleamount">Rs.1000.00</span>
+            <span className="saleamount">Rs.1,0000.00</span>
             <span className="saletext">Total Sale (Sep)</span>
           </div>
           <div className="growthwrapper">
@@ -48,7 +48,7 @@ const Sale: React.FC = () => {
               />
               <span className="g-value">15%</span>
             </div>
-            <span className="g-text">This month Growth</span>
+            <span className="g-text">This Month Growth</span>
           </div>
         </div>
         <div className="seperator"></div>
@@ -63,7 +63,7 @@ const Sale: React.FC = () => {
               />
             </div>
             <div className="graph-text">
-              <span>Report: from 01 Sep to 30 Sep</span>
+              <span>Report: From 01 Sep to 30 Sep</span>
             </div>
           </div>
         </div>

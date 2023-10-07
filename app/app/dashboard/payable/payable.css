@@ -1,0 +1,40 @@
+.pay-wrapper {
+  width: 236px;
+  height: 366px;
+  background-color: #fff;
+  position: absolute;
+}
+.pay-infowwrapper {
+  display: flex;
+  width: 204px;
+  height: 40px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  margin-left: 16px;
+  position: relative;
+}
+.pay-imgcontainer {
+  width: 40px;
+  height: 40px;
+  background-color: #ffd0d0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pay-txt-container {
+  width: 156px;
+  height: 19px;
+  background-color: green;
+}
+.pay-txt-container span {
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 500;
+}
+.pay-amount {
+  width: 59px;
+  height: 24px;
+  background-color: #ffd0d0;
+}

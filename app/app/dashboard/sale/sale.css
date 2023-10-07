@@ -1,5 +1,5 @@
 :root {
-  --big-font: 26px;
+  --big-font: 18px;
   --med-font: 16px;
   --small-font: 14px;
 }
@@ -41,6 +41,7 @@
   font-size: var(--big-font);
   font-weight: 500;
   margin-left: 12px;
+  letter-spacing: 0.2px;
 }
 .monthfilter {
   height: 28px;
@@ -51,7 +52,6 @@
 }
 .filterheader {
   color: #4d4d4d;
-  font-family: Inter;
   font-size: 14px;
   padding: 8px 10px;
   font-weight: 400;
@@ -73,7 +73,7 @@
   width: 193px;
 }
 .seperator {
-  width: 1px;
+  width: 1.5px;
   height: 169px;
   background-color: #f1f1f1;
   margin-top: 40px;
@@ -90,13 +90,12 @@
 .saleamount {
   color: #1a1a1a;
   font-size: var(--big-font);
-  font-weight: 700;
+  font-weight: 600;
 }
 .saletext {
   width: auto;
   height: 19px;
   color: #666;
-  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -107,21 +106,18 @@
   height: 39px;
   margin-top: 45px;
   margin-left: 16px;
-  /* background-color: #666; */
 }
 .growth {
   color: #12b76a;
 }
 .g-value {
   color: #12b76a;
-  font-family: Inter;
   font-size: var(--med-font);
   font-weight: 600;
 }
 .g-text {
   color: #666;
-  font-family: Inter;
-  font-size: var(--med-font);
+  font-size: var(--small-font);
   font-weight: 400;
 }
 .right {
