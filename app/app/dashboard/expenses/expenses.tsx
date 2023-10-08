@@ -1,5 +1,6 @@
 import "./expenses.css";
 import Image from "next/image";
+
 const Expenses: React.FC = () => {
   return (
     <div>
