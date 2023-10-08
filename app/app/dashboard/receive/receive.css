@@ -1,0 +1,120 @@
+.receive-wrapper {
+    width: 236px;
+    height: 366px;
+    border-radius: 8px;
+    background-color: #fff;
+    position: absolute;
+  }
+  .receive-infowwrapper {
+    display: flex;
+    width: 204px;
+    height: 40px;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    margin-left: 16px;
+    position: relative;
+  }
+  .receive-imgcontainer {
+    width: 40px;
+    height: 40px;
+    background-color: #CEF4DB;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .receive-txt-container {
+    width: 156px;
+    height: 19px;
+  }
+  .receive-txt-container span {
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .receive-amount {
+    width: 59px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6.5px;
+    margin-left:67px;
+    
+  }
+  .receive-amount span{
+    color: #1A1A1A;
+  font-size: 20px;
+  font-weight: 700;
+  }
+  
+  .graph{
+    margin-left:55px;
+    margin-top:16px;
+    width: 98px;
+    height: 98px;
+    position: absolute;
+  
+    
+  }
+  .receive-overdue{
+    width:56px;
+    height:15px;
+    margin-left:32px;
+    display: flex;
+  align-items: center;
+    
+  }
+  .receive-overdue span{
+    color: #666;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 115px;
+  margin-left:47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+    
+  }
+  .receive-transaction{
+    display: flex;
+    color:#666;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left:16px;
+  margin-top:125px;
+  }
+  
+  .trans{
+    color:#06F;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left:10px
+  }
+  .receive-customers{
+    display: flex;
+  width: 203px;
+  align-items: center;
+  }
+  .customer-list{
+    list-style:none;
+    margin-top:10px
+  }
+  .customer-name{
+    font-size:12px;
+    color:#1A1A1A;
+  font-weight: 400;
+  margin-left:16px;
+  
+  }
+  .customer-amount{
+    color:#D01717;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left:120px;
+  }
+  
+  
