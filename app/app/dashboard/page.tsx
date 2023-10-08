@@ -4,6 +4,7 @@ import Expenses from "./expenses/expenses";
 import Payable from "./payable/payable";
 import Receive from "./receive/receive"
 import "./page.css";
+import Purchase from "./purchase/purchase";
 
 export interface IpageProps {}
 
@@ -18,7 +19,7 @@ export default function page(props: IpageProps) {
       <div className="payable">
         <Payable />
       </div>
-    
+    <div className="purchase"><Purchase/></div>
     </div>
   );
 }
