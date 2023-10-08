@@ -1,6 +1,7 @@
 .pay-wrapper {
   width: 236px;
   height: 366px;
+  border-radius: 8px;
   background-color: #fff;
   position: absolute;
 }
@@ -26,7 +27,6 @@
 .pay-txt-container {
   width: 156px;
   height: 19px;
-  background-color: green;
 }
 .pay-txt-container span {
   color: #1a1a1a;
@@ -36,5 +36,84 @@
 .pay-amount {
   width: 59px;
   height: 24px;
-  background-color: #ffd0d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6.5px;
+  margin-left:67px;
+  
 }
+.pay-amount span{
+  color: #1A1A1A;
+font-size: 20px;
+font-weight: 700;
+}
+
+.graph{
+  margin-left:55px;
+  margin-top:16px;
+  width: 98px;
+  height: 98px;
+  position: absolute;
+
+  
+}
+.pay-overdue{
+  width:56px;
+  height:15px;
+  margin-left:32px;
+  display: flex;
+align-items: center;
+  
+}
+.pay-overdue span{
+  color: #666;
+font-size: 12px;
+font-weight: 400;
+margin-top: 115px;
+margin-left:48px;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+  
+}
+.transaction{
+  display: flex;
+  color:#666;
+font-size: 12px;
+font-weight: 400;
+margin-left:16px;
+margin-top:125px;
+}
+
+.trans{
+  color:#06F;
+font-size: 12px;
+font-weight: 500;
+margin-left:10px
+}
+.customers{
+  display: flex;
+width: 203px;
+align-items: center;
+}
+.customer-list{
+  list-style:none;
+  margin-top:10px
+}
+.customer-name{
+  font-size:12px;
+  color:#1A1A1A;
+font-weight: 400;
+margin-left:16px;
+
+}
+.customer-amount{
+  color:#D01717;
+text-align: right;
+font-size: 12px;
+font-weight: 600;
+margin-left:120px;
+}
+
