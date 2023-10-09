@@ -6,6 +6,7 @@
   flex-basis: 75%;
   display: flex;
   flex-direction: column;
+  /* background-color: azure; */
 }
 .dash-rightwrapper {
   flex-basis: 25%;
@@ -29,5 +30,9 @@
 }
 .receivable-card {
   width: 236px;
+  height: 366px;
+}
+.purchase-card {
+  width: 260px;
   height: 366px;
 }

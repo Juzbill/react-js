@@ -45,11 +45,11 @@ const Payable: React.FC = () => {
           height={2}
         />
       </div>
-      <div className="customers">
+      <div className="pay-customers">
         <ul>
           <li className="customer-list">
-            <span className="customer-name">Karthick</span>
-            <span className="customer-amount">210</span>
+            <span className="pay-customer-name">Karthick</span>
+            <span className="pay-customer-amount">210</span>
           </li>
         </ul>
       </div>
