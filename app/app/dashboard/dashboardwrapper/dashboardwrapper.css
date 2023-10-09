@@ -1,0 +1,33 @@
+.dash-wrapper {
+  width: 100%;
+  display: flex;
+}
+.dash-leftwrapper {
+  flex-basis: 75%;
+  display: flex;
+  flex-direction: column;
+}
+.dash-rightwrapper {
+  flex-basis: 25%;
+}
+.home-topinfo-wrapper {
+  flex-basis: 50%;
+  margin-top: -20px;
+  display: flex;
+  /* background-color: green; */
+}
+.home-bottominfo-wrapper {
+  flex-basis: 50%;
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.payable-card {
+  width: 236px;
+  height: 366px;
+}
+.receivable-card {
+  width: 236px;
+  height: 366px;
+}

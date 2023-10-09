@@ -54,7 +54,7 @@ const Sale: React.FC = () => {
         <div className="seperator"></div>
         <div className="right">
           <div className="grph-w">
-            <div className="graph">
+            <div className="sale-graph">
               <Image
                 src="/HomeIcons/salegraph.svg"
                 alt="graph"
