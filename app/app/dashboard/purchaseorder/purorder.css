@@ -1,0 +1,62 @@
+
+
+.purorder-wrapper{
+    width:240px;
+    height: 116px;
+    border-radius: 8px;
+background: #FFF;
+}
+.purorder-info{
+    width:208px;
+    height: 118px;
+    display: inline-flex;
+flex-direction: column;
+align-items: flex-start;
+margin-top:12px;
+}
+.purorder-txt span{
+    width:158px;
+    height: 17px;
+    color: #1A1A1A;
+font-size: 14px;
+font-weight: 500;
+margin-left: 16px;
+}
+
+.purorder-line{
+    width: 208px;
+height: 1px;
+margin-left: 16px;
+background: #E6E6E6;
+margin-top:12px;
+margin-bottom: 12px;
+}
+.purorder-customers{
+  display: flex;
+align-items: center;
+gap: 16px;
+  }
+  .purorder-items{
+    margin-top:4px;
+    width: 208px;
+  }
+  .purorder-item-orders{
+    font-size:12px;
+    color:#1A1A1A;
+  font-weight: 400;
+  margin-left:16px;
+  width: 182px;
+  height: 15px;
+  
+  }
+  
+  .purorder-item-stock{
+  color:#06F;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left:34px;
+  width: 32px;
+  height: 15px;
+  
+  }

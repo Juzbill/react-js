@@ -34,7 +34,7 @@ const Expenses: React.FC = () => {
         </div>
         <div className="exp-amount-wrapper">
           <div className="exp-amount">
-            <span>Rs. 500</span>
+            <span>Rs. 500.00</span>
           </div>
           <div className="exp-status">
             <Image
@@ -43,7 +43,7 @@ const Expenses: React.FC = () => {
               width={20}
               height={20}
             />
-            <span>20%</span>
+            <span>2%</span>
           </div>
         </div>
         <div className="exp-image-container">
@@ -51,8 +51,8 @@ const Expenses: React.FC = () => {
             <Image
               src="/HomeIcons/Expensesgraph.svg"
               alt="graph"
-              width={264}
-              height={127}
+              width={216}
+              height={164}
             />
           </div>
         </div>

@@ -1,0 +1,67 @@
+.lowstock-wrapper{
+    width:240px;
+    height: 150px;
+    border-radius: 8px;
+background: #FFF;
+}
+.lowstock-info{
+    width:208px;
+    height: 118px;
+    display: inline-flex;
+flex-direction: column;
+align-items: flex-start;
+margin-top:12px;
+}
+.lowstock-txt span{
+    width:158px;
+    height: 17px;
+    color: #1A1A1A;
+font-size: 14px;
+font-weight: 500;
+margin-left: 16px;
+}
+.lowstock-txt .lowstock-see{
+width: 40px;
+height: 15px;
+color: #06F;
+font-size: 12px;
+font-weight: 500;
+margin-left: 86px;
+}
+.lowstock-line{
+    width: 208px;
+height: 1px;
+margin-left: 16px;
+background: #E6E6E6;
+margin-top:12px;
+margin-bottom: 12px;
+}
+.lowstock-customers{
+  display: flex;
+align-items: center;
+gap: 16px;
+  }
+  .lowstock-list{
+    list-style:none;
+    margin-top:4px;
+    width: 208px;
+  }
+  .lowstock-item-name{
+    font-size:12px;
+    color:#1A1A1A;
+  font-weight: 400;
+  margin-left:16px;
+  width: 160px;
+  height: 15px;
+  
+  }
+  .lowstock-item-stock{
+  color:#D01717;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left:45px;
+  width: 32px;
+  height: 15px;
+  
+  }

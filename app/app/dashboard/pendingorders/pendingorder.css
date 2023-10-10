@@ -1,0 +1,79 @@
+.pending-wrapper{
+    width:240px;
+    height: 150px;
+    border-radius: 8px;
+background: #FFF;
+}
+.pending-info{
+    width:208px;
+    height: 118px;
+    display: inline-flex;
+flex-direction: column;
+align-items: flex-start;
+margin-top:12px;
+}
+.pending-txt span{
+    width:158px;
+    height: 17px;
+    color: #1A1A1A;
+font-size: 14px;
+font-weight: 500;
+margin-left: 16px;
+}
+
+.pending-line{
+    width: 208px;
+height: 1px;
+margin-left: 16px;
+background: #E6E6E6;
+margin-top:12px;
+margin-bottom: 12px;
+}
+.pending-customers{
+  display: flex;
+align-items: center;
+gap: 16px;
+  }
+  .pending-items{
+    margin-top:4px;
+    width: 208px;
+  }
+  .pending-item-orders{
+    font-size:12px;
+    color:#1A1A1A;
+  font-weight: 400;
+  margin-left:16px;
+  width: 188px;
+  height: 15px;
+  
+  }
+  .pending-amt{
+    margin-top: 16px;
+  }
+  .pending-item-orderamt{
+    font-size:12px;
+    color:#1A1A1A;
+  font-weight: 400;
+  margin-left:16px;
+  width: 173px;
+  height: 15px;
+  }
+  .pending-orderamt{
+    color:#06F;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left:21px;
+  width: 32px;
+  height: 15px;
+  }
+  .pending-item-stock{
+  color:#06F;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left:58px;
+  width: 32px;
+  height: 15px;
+  
+  }

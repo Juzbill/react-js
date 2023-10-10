@@ -1,0 +1,59 @@
+.selling-wrapper{
+    width:240px;
+    height: 150px;
+    border-radius: 8px;
+background: #FFF;
+}
+.selling-info{
+    width:208px;
+    height: 118px;
+    display: inline-flex;
+flex-direction: column;
+align-items: flex-start;
+margin-top:12px;
+}
+.selling-txt span{
+    width:115px;
+    height: 17px;
+    color: #1A1A1A;
+font-size: 14px;
+font-weight: 500;
+margin-left: 16px;
+}
+.selling-line{
+    width: 208px;
+height: 1px;
+margin-left: 16px;
+background: #E6E6E6;
+margin-top:12px;
+margin-bottom: 12px;
+}
+.Selling-customers{
+  display: flex;
+align-items: center;
+gap: 16px;
+  }
+  .selling-list{
+    list-style:none;
+    margin-top:4px;
+    width: 208px;
+  }
+  .selling-item-name{
+    font-size:12px;
+    color:#1A1A1A;
+  font-weight: 400;
+  margin-left:16px;
+  width: 160px;
+  height: 15px;
+  
+  }
+  .selling-item-stock{
+  color:#06F;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left:55px;
+  width: 32px;
+  height: 15px;
+  
+  }
