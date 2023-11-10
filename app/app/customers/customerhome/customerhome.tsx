@@ -15,7 +15,13 @@ const customerbalance = [
   { id: 7, name: "Alice", balance: 32000.0 },
 ];
 
+const recentcustomer = [
+  { id: 1, name: "William Alexander", creditlimit: 1000.0 }
+];
 
+const customerdetail=[
+  {phone:9876543210, emailid:"Alexander123@gmail.com"}
+]
 const CustomerHome: React.FC = () => {
   return (
     <Box className="homewrapper" sx={{ width: '100%', height: 'auto', backgroundColor: '#f2f7ff', marginTop: '-30px' }}>
@@ -39,7 +45,7 @@ const CustomerHome: React.FC = () => {
       <img src="/Customers/search.svg" alt="party filter" width={16} height={16} />
 <InputBase placeholder='Search' fullWidth sx={{border: 'none',outline: 'none',color: '#b3b3b3',fontSize: '14px',marginLeft:'8px',fontWeight:'400'}}/>
       </Box>
-      <Box className="cxadd" sx={{width: '180px',borderRadius:'4px', backgroundColor: '#06f', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center',}}>
+      <Box className="cxadd" sx={{width: '180px',borderRadius:'4px', backgroundColor: '#06f', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
               <Button >
                 <Typography sx={{fontSize:'12px', fontWeight:'400', color:'white'}}>+ Add Customers</Typography>
               </Button>
@@ -91,21 +97,31 @@ const CustomerHome: React.FC = () => {
       <Box className="cx-detail" sx={{width:'620px', height:'140px', borderRadius: '12px'}}>
       <Box className="cx-detail-wrapper" sx={{width:'460px', height:'140px', borderRadius: '12px',border: '1px solid var(--line-Color, #E6E6E6)',
 background: 'linear-gradient(113deg, rgba(230, 230, 230, 0.25) 12.31%, rgba(240, 240, 240, 0.05) 57.41%, rgba(230, 230, 230, 0.10) 123.61%)', margin:'18px'}}>
- <Box className="cx-profile" sx={{width: '458px',height: '32px', background: 'rgba(230, 230, 230, 0.30)', display:'flex', marginTop:'14px'}}>
-    <Typography className="cx-name" sx={{color:'#1A1A1A',fontSize: '16px',fontWeight: '500', width:'263px', height:'19px', marginLeft:'20px'}}>
-       Alexandar
+ <Box className="cx-profile" sx={{width: '458px',height: '42px', background: 'rgba(230, 230, 230, 0.30)', display:'flex', marginTop:'14px'}}>
+ <List>
+    {recentcustomer.map((recent,index)=>(
+      <ListItem key={index}>
+    <Typography className="cx-name" sx={{color:'#1A1A1A',fontSize: '16px',fontWeight: '500', width:'243px', height:'19px', marginLeft:'10px'}}>
+       {recent.name}
     </Typography>
     <Typography className="cx-creditLimit" variant="body2" sx={{display:'flex', alignItems:'center'}}>
-      Credit Limit: Rs. 40,000
+      Credit Limit: Rs. {recent.creditlimit}
     </Typography>
-  </Box>
+  
+  </ListItem>
+    ))}
+    </List>
+    </Box>
   <Box className="cx-address-wrapper" sx={{marginLeft:'20px'}}>
-    <Box className="cx-phone" sx={{display:'flex', alignItems:'center', marginTop:'15px'}}>
+  <List>
+      {customerdetail.map((detail,index)=>(
+        <Box key={index}>
+    <Box className="cx-phone" sx={{display:'flex', alignItems:'center', marginTop:'7px'}}>
       <Typography className="cx-phonekey" variant="body2" >
         Phone:
       </Typography>
       <Typography className="cx-phonevalue" variant="body2" >
-        9876543210
+       {detail.phone}
       </Typography>
     </Box>
     <Box className="cx-email" sx={{display:'flex', alignItems:'center'}}>
@@ -113,7 +129,7 @@ background: 'linear-gradient(113deg, rgba(230, 230, 230, 0.25) 12.31%, rgba(240,
         Email:
       </Typography>
       <Typography className="cx-emailvalue" variant="body2">
-        test@gmail.com
+        {detail.emailid}
       </Typography>
     </Box>
     <Box className="cx-gst" sx={{display:'flex', alignItems:'center'}}>
@@ -125,6 +141,9 @@ background: 'linear-gradient(113deg, rgba(230, 230, 230, 0.25) 12.31%, rgba(240,
       </Typography> 
     </Box>
     </Box>
+     ))}
+     </List>
+     </Box>
 </Box>
 </Box>
 
