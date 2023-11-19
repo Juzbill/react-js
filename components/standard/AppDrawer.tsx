@@ -17,11 +17,20 @@ import CategoryRoundedIcon from "@mui/icons-material/CategoryRounded";
 import CurrencyRupeeRoundedIcon from "@mui/icons-material/CurrencyRupeeRounded";
 import StoreRoundedIcon from "@mui/icons-material/StoreRounded";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import StarBorder from "@mui/icons-material/StarBorder";
+import AddIcon from "@mui/icons-material/Add";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import {
   Avatar,
   Button,
+  Collapse,
   IconButton,
   InputBase,
+  ListSubheader,
   alpha,
   styled,
 } from "@mui/material";
@@ -85,6 +94,23 @@ interface IAppDrawerLeft {
 const menu = [{}];
 
 export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
+  // state for handling nested sale
+  const [SaleOpen, setSaleOpen] = React.useState(false);
+
+  const handleSaleClick = () => {
+    setSaleOpen(!SaleOpen);
+  };
+  const [PurchaseOpen, setPurchaseOpen] = React.useState(false);
+
+  const handlePurchaseClick = () => {
+    setPurchaseOpen(!PurchaseOpen);
+  };
+  const [BankOpen, setBankOpen] = React.useState(false);
+
+  const handleBankClick = () => {
+    setBankOpen(!BankOpen);
+  };
+
   const router = useRouter();
   return (
     <Box sx={{ display: "flex" }}>
@@ -232,22 +258,203 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
               <ListItemText primary={"Items"} />
             </ListItemButton>
           </ListItem>
+          {/* // ADDING SALE */}
           <ListItem disablePadding>
-            <ListItemButton onClick={() => router.push("/app/sales")}>
+            <ListItemButton onClick={handleSaleClick}>
               <ListItemIcon>
                 <CurrencyRupeeRoundedIcon style={{ color: "#FFFFFF" }} />
               </ListItemIcon>
-              <ListItemText primary={"Sales"} />
+              <ListItemText primary="Sale" />
+              {SaleOpen ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
           </ListItem>
+          <Collapse in={SaleOpen} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <span style={{ marginRight: "16px" }}>+</span>
+                </ListItemIcon>
+                <ListItemText primary="Add Sale" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Estimate" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Collect-Payment" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Sale Order" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Delivery Challan" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Sale Return" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Debit Note" />
+              </ListItemButton>
+            </List>
+          </Collapse>
+          {/* // ENDING SALE */}
+          {/* PURCHASE START */}
           <ListItem disablePadding>
-            <ListItemButton onClick={() => router.push("/app/purchases")}>
+            <ListItemButton onClick={handlePurchaseClick}>
               <ListItemIcon>
-                <StoreRoundedIcon style={{ color: "#FFFFFF" }} />
+                <ShoppingCartIcon style={{ color: "#FFFFFF" }} />
               </ListItemIcon>
-              <ListItemText primary={"Purchases"} />
+              <ListItemText primary="Purchase" />
+              {PurchaseOpen ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
           </ListItem>
+          <Collapse in={PurchaseOpen} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <span style={{ marginRight: "16px" }}>+</span>
+                </ListItemIcon>
+                <ListItemText primary="Add Purchase" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Payment-Out" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Purchase-Order" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Purchase Return" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Credit Note" />
+              </ListItemButton>
+            </List>
+          </Collapse>
+          {/* PURCHASE END */}
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => router.push("/app/expenes")}>
+              <ListItemIcon>
+                <AccountBalanceWalletIcon style={{ color: "#FFFFFF" }} />
+              </ListItemIcon>
+              <ListItemText primary={"Expenses"} />
+            </ListItemButton>
+          </ListItem>
+          {/* BANKING START */}
+          <ListItem disablePadding>
+            <ListItemButton onClick={handleBankClick}>
+              <ListItemIcon>
+                <ShoppingCartIcon style={{ color: "#FFFFFF" }} />
+              </ListItemIcon>
+              <ListItemText primary="Cash & Bank" />
+              {PurchaseOpen ? <ExpandLess /> : <ExpandMore />}
+            </ListItemButton>
+          </ListItem>
+          <Collapse in={BankOpen} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <span style={{ marginRight: "16px" }}>+</span>
+                </ListItemIcon>
+                <ListItemText primary="Bank Accounts" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Cash Management" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Cheques" />
+              </ListItemButton>
+              <ListItemButton
+                sx={{ pl: 2 }}
+                onClick={() => router.push("/app/sales")}
+              >
+                <ListItemIcon>
+                  <StarBorder />
+                </ListItemIcon>
+                <ListItemText primary="Loan Accounts" />
+              </ListItemButton>
+            </List>
+          </Collapse>
+          {/* BANKING END */}
         </List>
       </Drawer>
     </Box>

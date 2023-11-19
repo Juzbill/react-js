@@ -1,0 +1,25 @@
+/* .sale-wr-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+} */
+.sale-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: rgba(196, 192, 192, 0.87);
+}
+
+.sale-nav-border {
+  border-left: 1px solid #000;
+  height: 100%;
+}
+.sale-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
