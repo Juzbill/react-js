@@ -1,0 +1,33 @@
+@media only screen and (max-width: 576px) {
+  .homewrapper{
+    width: 30%;
+    
+  }
+  .midwrapper{
+    width:100px;
+   height: 450px;
+  }
+  .search-bar{
+    width: 150px;
+  }
+  .search{
+    width: 200px;
+  }
+  .leftwrapper{
+    flex-basis: 5%;
+  }
+  .addwrapper{
+    width:30%;
+    display: block;
+  }
+  InputBase{
+    font-size: 2px;
+  }
+  .cxadd{
+    width:100px;
+    height: 52px;
+  }
+  .cx-rightwrapper{
+    display: block;
+  }
+}

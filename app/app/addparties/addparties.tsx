@@ -1,17 +1,25 @@
+"use client"
 import { Box, FormControl, Typography, TextField, Stack } from "@mui/material";
 import SettingsIcon from '@mui/icons-material/Settings';
 import CloseIcon from '@mui/icons-material/Close';
 import "./addparties.css";
 // import Divider from '@mui/material/Divider';
 
+import React, { useState } from 'react';
+import { Tabs, Tab, Paper } from '@mui/material';
+import Checkbox from '@mui/material/Checkbox';
 
 
 
 
 
-
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 const Addparties: React.FC = () => {
+  const [value, setValue] = useState(0);
+  const handleChange = (event:any, newValue:any) => {
+    setValue(newValue);
+  };
   return (
     <Box className='add-topwrapper' sx={{width:'1008px',background: '#FFF', height:'550px',  borderRadius: '8px'}}>
         <Box className='add-midwrapper' sx={{width:'900px',color:'#666',display: 'flex',height:'40px', marginTop: '12px', marginLeft: '26px',borderBottom: '1px solid var(--line-Color, #E6E6E6)',background: '#FFF'}}>
@@ -39,18 +47,52 @@ const Addparties: React.FC = () => {
         <TextField label="Party Group" variant="outlined" sx={{ width: '270px' }}  />
        </FormControl>
 
-        <Box className='add-lastwrapper' sx={{width:'900px',color:'#666',display: 'flex',height:'40px', marginTop: '22px', marginLeft: '26px',borderBottom: '1px solid var(--line-Color, #E6E6E6)',background: '#FFF'}}>
-        <Typography>GST&Address</Typography>
-        </Box>
-
-        <Box className="add-gst-form" sx={{marginTop:"35px", marginLeft:'26px', color:'#666'}}>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        indicatorColor="primary"
+        textColor="primary" 
+        className='add-lastwrapper' 
+        sx={{width:'900px',color:'#666',display: 'flex',height:'40px', marginTop: '22px', marginLeft: '26px',borderBottom: '1px solid var(--line-Color, #E6E6E6)',background: '#FFF'}}
+      >
+        <Tab label="GST & Address" />
+        <Tab label="Credit & Balance" />
+        <Tab label="Additional fields" />
+      </Tabs>
+      {/* Content for each tab */}
+      {value === 0 && <Box className="add-gst-form" sx={{marginTop:"35px", marginLeft:'26px', color:'#666'}}>
         <FormControl >
         <TextField label="GST Type" variant="outlined" sx={{ width: '300px' }}  />
         <TextField label="State" variant="outlined" sx={{ width: '300px', marginTop:'10px' }}  />
         <TextField label="Email ID" variant="outlined" sx={{ width: '300px',marginTop:'10px' }}  />
        </FormControl>
         </Box>
-        {/* <Stack  divider={<Divider orientation="vertical" />}></Stack> */}
+}
+      {value === 1 && <Box className="add-gst-form" sx={{marginTop:"35px", display:'flex', marginLeft:'26px', color:'#666'}}>
+      <FormControl sx={{padding:"8px"}}>
+        <TextField label="Opening Balance" variant="outlined" sx={{ width: '320px' }}  />
+        </FormControl>
+        <FormControl sx={{padding:"8px"}}>
+        <TextField label="As of Date" variant="outlined" sx={{ width: '320px' }}  />
+        </FormControl>
+        </Box>}
+      {value === 2 && <Box className="add-gst-form" sx={{marginTop:"35px", marginLeft:'26px', color:'#666'}}>
+        <FormControl >
+        <TextField label="Additional Field 1 Name" variant="outlined" sx={{ width: '300px' }}  />
+        </FormControl>
+        <FormControl >
+        <TextField label="Additional Field 2 Name" variant="outlined" sx={{ width: '300px', marginTop:'10px' }}  />
+        </FormControl>
+        <FormControl >
+        <TextField label="Additional Field 3 Name" variant="outlined" sx={{ width: '300px',marginTop:'10px' }}  />
+        </FormControl>
+        <FormControl >
+        <TextField label="Additional Field 4 Name" variant="outlined" sx={{ width: '300px',marginTop:'10px' }}  />
+       </FormControl>
+        </Box>}
+  
+
+
     </Box>
  
  
