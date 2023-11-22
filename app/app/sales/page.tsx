@@ -1,5 +1,5 @@
 import * as React from "react";
-import SalesWrapper from "./saleswrapper/saleswrapper";
+import SalesWrapper from "../../../components/Sale/saleswrapper/saleswrapper";
 
 export interface IpageProps {}
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./page.css";
-import DashboardWrapper from "./dashboardwrapper/dashboardwrapper";
+import DashboardWrapper from "../../../components/Dashboard/dashboardwrapper/dashboardwrapper";
 
 export interface IpageProps {}
 

@@ -235,7 +235,9 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton onClick={() => router.push("/app/customers")}>
+            <ListItemButton
+              onClick={() => router.push("/app/parties/customers")}
+            >
               <ListItemIcon>
                 <GroupIcon style={{ color: "#FFFFFF" }} />
               </ListItemIcon>

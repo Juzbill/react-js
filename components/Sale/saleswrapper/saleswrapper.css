@@ -1,0 +1,13 @@
+.sale-wrapper-splitter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: green;
+}
+.sale-wrp-party-detail {
+  flex-basis: 50%;
+}
+.sale-wrp-inv-detail {
+  flex-basis: 50%;
+}
