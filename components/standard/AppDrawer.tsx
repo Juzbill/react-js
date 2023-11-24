@@ -274,7 +274,7 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
             <List component="div" disablePadding>
               <ListItemButton
                 sx={{ pl: 2 }}
-                onClick={() => router.push("/app/sales")}
+                onClick={() => router.push("/app/sales/create")}
               >
                 <ListItemIcon>
                   <span style={{ marginRight: "16px" }}>+</span>

@@ -25,7 +25,7 @@ const InvoiceNumber: React.FC = () => {
   ];
   const [selectedState, setSelectedState] = React.useState("");
 
-  const handleStateChange = (event) => {
+  const handleStateChange = (event: Box.SelectChangeEvent<string>) => {
     setSelectedState(event.target.value);
   };
   return (
