@@ -97,7 +97,7 @@ const Addparties: React.FC = () => {
 
   const handleIconClick = () => {
   
-    router.push("/app/parties/customers/settings")
+    router.push("/app/settings/settingsnav")
   };
 
   return (
