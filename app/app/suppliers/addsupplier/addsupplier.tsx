@@ -11,8 +11,6 @@ RadioGroup,
 FormControlLabel} from "@mui/material";
 import SettingsIcon from '@mui/icons-material/Settings';
 import CloseIcon from '@mui/icons-material/Close';
-import "./addparties.css";
-// import Divider from '@mui/material/Divider';
 import React, { useState } from 'react';
 import { Tabs, Tab, Paper } from '@mui/material';
 import { useRouter } from "next/navigation";
@@ -23,7 +21,7 @@ import { useRouter } from "next/navigation";
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-const Addparties: React.FC = () => {
+const Addsupplier: React.FC = () => {
   const router=useRouter()
   const [value, setValue] = useState(0);
   const handleChange = (event:any, newValue:any) => {
@@ -52,19 +50,19 @@ const Addparties: React.FC = () => {
     setIsValidGST(validateGSTNumber(inputValue));
   };
 
-  const [partyname, setPartyname] = useState('');
-  const [isValidPartyname, setIsValidPartyname] = useState(true);
+  const [suppliername, setSuppliername] = useState('');
+  const [isValidSuppliername, setIsValidSuppliername] = useState(true);
   
 
-  const validatePartyname = (name: string) => {
+  const validateSuppliername = (name: string) => {
     // Add your validation logic for partyname here
     return name.trim() !== '' && name.length <= 25; // Partyname must not be empty and should be at most 25 characters
   };
 
-  const handlePartynameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSuppliernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const input = e.target.value;
-    setPartyname(input);
-    setIsValidPartyname(validatePartyname(input));
+    setSuppliername(input);
+    setIsValidSuppliername(validateSuppliername(input));
   };
 
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -95,18 +93,15 @@ const Addparties: React.FC = () => {
   //   setPaymentType(event.target.value);
   // };
 
-  const handleIconClick = () => {
-  
-    router.push("/app/parties/customers/settings")
-  };
+ 
 
   return (
     isVisible && (
     <Box className='add-topwrapper' sx={{width:'980px',background: '#FFF', height:'610px',  borderRadius: '8px'}}>
         <Box className='add-midwrapper' sx={{width:'900px',color:'#666',display: 'flex',height:'40px', marginTop: '12px', marginLeft: '26px',borderBottom: '1px solid var(--line-Color, #E6E6E6)',background: '#FFF'}}>
-        <Typography>Add Party</Typography>
+        <Typography>Add Supplier</Typography>
         <Box className="add-setting" sx={{marginLeft:'725px'}} >
-        <SettingsIcon sx={{ fontSize: 25, color: '#666' }}onClick={handleIconClick} />
+        <SettingsIcon sx={{ fontSize: 25, color: '#666' }}/>
         </Box>
         <Box className="add-close" sx={{marginLeft:'25px'}} >
         <CloseIcon sx={{ fontSize: 25, color: '#666' }} onClick={handleClose} />
@@ -115,13 +110,13 @@ const Addparties: React.FC = () => {
         
         <Box className="add-form" sx={{marginTop:"15px", marginLeft:'22px', display:'flex', color:'#666'}}>
         <FormControl sx={{padding:"8px"}}>
-        <TextField label="Partyname*" variant="outlined" sx={{ width: '270px',padding:'4px' }} InputProps={{style:{height:"40px"}}} 
-        value={partyname}
-          onChange={handlePartynameChange}
-          error={!isValidPartyname}
+        <TextField label="Suppliername*" variant="outlined" sx={{ width: '270px',padding:'4px' }} InputProps={{style:{height:"40px"}}} 
+        value={suppliername}
+          onChange={handleSuppliernameChange}
+          error={!isValidSuppliername}
           helperText={
-            !isValidPartyname
-              ? 'Partyname cannot be empty and must be at most 25 characters'
+            !isValidSuppliername
+              ? 'Suppliername cannot be empty and must be at most 25 characters'
               : ''
           } />
         </FormControl>
@@ -142,9 +137,9 @@ const Addparties: React.FC = () => {
  />
        </FormControl>
         </Box>
-        <FormControl sx={{padding:"8px", marginLeft:'22px'}}>
+        {/* <FormControl sx={{padding:"8px", marginLeft:'22px'}}>
         <TextField label="Party Group" variant="outlined" sx={{ width: '270px',padding:'4px' }} InputProps={{style:{height:"40px"}}}  />
-       </FormControl>
+       </FormControl> */}
 
       <Tabs
         value={value}
@@ -188,7 +183,7 @@ const Addparties: React.FC = () => {
       {value === 1 && <Box className="add-gst-form" sx={{marginTop:"35px", display:'flex',flexDirection: 'column', marginLeft:'26px', color:'#666'}}>
       <Box>
       <FormControl sx={{padding:"8px"}}>
-        <TextField label="Receivable Balance" variant="outlined" sx={{ width: '320px',padding:'4px' }} InputProps={{style:{height:"40px"}}} />
+        <TextField label="Payable Balance" variant="outlined" sx={{ width: '320px',padding:'4px' }} InputProps={{style:{height:"40px"}}} />
         </FormControl>
         <FormControl sx={{padding:"8px"}}>
         <TextField label="As of Date" variant="outlined" sx={{ width: '320px',padding:'4px' }} 
@@ -248,4 +243,4 @@ const Addparties: React.FC = () => {
   )
 }
 
-export default Addparties;
+export default Addsupplier;

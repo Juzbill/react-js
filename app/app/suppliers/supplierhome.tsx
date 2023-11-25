@@ -1,7 +1,9 @@
+"use client"
 import "./supplierhome.css";
 import React from "react";
 import Image from "next/image";
 import { Box,  Typography, Button, TextField, Paper, Grid, ImageList, List, ListItem, ListItemText, InputBase } from '@mui/material';
+import { useRouter } from 'next/navigation';
 
 
 
@@ -23,6 +25,9 @@ const customerdetail=[
 ]
 
 const SupplierHome: React.FC = () => {
+  const router = useRouter();
+
+
   return (
     <Box className="sup-homewrapper" sx={{ width: '100%', height: 'auto', backgroundColor: '#f2f7ff', marginTop: '-30px' }}>
     <Box sx={{ display: 'flex', width: '1008px', alignItems: 'center', marginTop: '12px', marginLeft: '16px', height: '40px', borderRadius: '4px', background: '#fff' }}>
@@ -43,8 +48,8 @@ const SupplierHome: React.FC = () => {
       </Box>
     
     <Box className="sup-add" sx={{width: '180px',borderRadius:'4px', backgroundColor: '#06f', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center',}}>
-              <Button >
-                <Typography sx={{fontSize:'12px', fontWeight:'400', color:'white'}}>+ Add Customers</Typography>
+              <Button onClick={() => router.push("/app/suppliers/addsupplier")}>
+                <Typography sx={{fontSize:'12px', fontWeight:'400', color:'white'}}>+ Add Suppliers</Typography>
               </Button>
             </Box>
             </Box>

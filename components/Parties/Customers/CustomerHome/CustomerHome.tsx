@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import {
@@ -12,6 +13,8 @@ import {
   ListItemText,
   InputBase,
 } from "@mui/material";
+
+import { useRouter } from 'next/navigation';
 
 const customerbalance = [
   { id: 1, name: "John", balance: 1000.0 },
@@ -31,6 +34,7 @@ const customerdetail = [
   { phone: 9876543210, emailid: "Alexander123@gmail.com" },
 ];
 const CustomerHome: React.FC = () => {
+  const router = useRouter();
   return (
     <Box
       className="midwrapper"
@@ -113,7 +117,7 @@ const CustomerHome: React.FC = () => {
                 justifyContent: "center",
               }}
             >
-              <Button>
+              <Button onClick={() => router.push("/app/parties/customers/addcustomer")}>
                 <Typography
                   sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
                 >
