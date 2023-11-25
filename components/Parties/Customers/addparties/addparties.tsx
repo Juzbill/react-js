@@ -197,20 +197,6 @@ const Addparties: React.FC = () => {
       onChange={(e) => setAsOfDate(e.target.value)}/>
         </FormControl>
         </Box>
-        {/* <Box sx={{ marginLeft: '20px', marginTop: '5px' }}>
-        <FormControl component="fieldset" sx={{ padding: "8px" }}>
-        <RadioGroup
-          row
-          aria-label="paymentType"
-          name="paymentType"
-          value={paymentType}
-          onChange={handlePaymentTypeChange}
-        >
-          <FormControlLabel value="toPay" control={<Radio />} label="To Pay" />
-          <FormControlLabel value="toReceive" control={<Radio />} label="To Receive" />
-        </RadioGroup>
-      </FormControl>
-      </Box> */}
         </Box>}
       {value === 2 && <Box className="add-gst-form" sx={{marginTop:"35px", marginLeft:'26px', color:'#666'}}>
         <FormControl>
