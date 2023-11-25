@@ -24,6 +24,7 @@ import StarBorder from "@mui/icons-material/StarBorder";
 import AddIcon from "@mui/icons-material/Add";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import SettingsIcon from "@mui/icons-material/Settings";
 import {
   Avatar,
   Button,
@@ -457,6 +458,18 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
             </List>
           </Collapse>
           {/* BANKING END */}
+          {/* SETTINGS */}
+          <ListItem disablePadding>
+            <ListItemButton
+              onClick={() => router.push("/app/settings/settingsnav")}
+            >
+              <ListItemIcon>
+                <SettingsIcon style={{ color: "#FFFFFF" }} />
+              </ListItemIcon>
+              <ListItemText primary={"Settings"} />
+            </ListItemButton>
+          </ListItem>
+          {/* SETTINGS END */}
         </List>
       </Drawer>
     </Box>

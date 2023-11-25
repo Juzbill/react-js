@@ -7,7 +7,10 @@ export interface ILayoutProviderProps {
 }
 
 export function LayoutProvider({ children }: ILayoutProviderProps) {
-  const pathsArray: string[] = ["/app/sales/create"];
+  const pathsArray: string[] = [
+    "/app/sales/create",
+    "/app/settings/settingsnav",
+  ];
   const pathname = usePathname();
 
   console.log(pathname);
