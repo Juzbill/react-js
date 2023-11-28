@@ -1,12 +1,14 @@
+import { ItemsHome } from "@/components/items/Items";
 import * as React from "react";
-import CustomerLayout from "./Layout";
 
 export interface IpageProps {}
 
-export default function page(props: IpageProps) {
+function page(props: IpageProps) {
   return (
-    <div className="flex w-full h-full pt-[102px] p-3">
-      <CustomerLayout>from items</CustomerLayout>
+    <div className="w-full  flex justify-start items-start p-4 mt-16">
+      <ItemsHome />
     </div>
   );
 }
+
+export default page;

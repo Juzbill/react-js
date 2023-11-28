@@ -14,7 +14,7 @@ export function LayoutProvider({ children }: ILayoutProviderProps) {
   return (
     <>
       {pathsArray.includes(pathname) ? (
-        <div>{children}</div>
+        <div className="w-full h-full">{children}</div>
       ) : (
         <AppHome>{children}</AppHome>
       )}

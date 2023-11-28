@@ -18,6 +18,7 @@ import {
   FormControlLabel,
   Radio,
 } from "@mui/material";
+import { DatePicker } from "@mui/x-date-pickers";
 
 export interface FormTextFieldControllerProps {
   size?: "small" | "medium";
@@ -363,5 +364,60 @@ export function FormControlCheckBox({
         sx={{ ...sx }}
       />
     </div>
+  );
+}
+
+export interface FormDateFieldControllerProps {
+  control: any;
+  fieldName: string;
+  rules?: {};
+  label?: string;
+  disabled?: boolean;
+  sx?: object;
+  varient?: TextFieldVariants;
+  dob?: boolean;
+  size?: "small" | "medium" | undefined;
+}
+export function FormDateFieldController({
+  control,
+  fieldName,
+  rules,
+  label,
+  disabled,
+  sx,
+  varient,
+  dob = false,
+  size = "medium",
+}: FormDateFieldControllerProps) {
+  return (
+    <Controller
+      name={fieldName}
+      control={control}
+      rules={rules}
+      render={({
+        field: { onChange, value },
+        fieldState: { invalid, isTouched, isDirty, error },
+      }) => (
+        <DatePicker
+          label={label}
+          disabled={disabled}
+          sx={{
+            ...sx,
+          }}
+          slotProps={{
+            textField: {
+              variant: "outlined",
+              helperText: error?.message,
+              error: !!error,
+              size: size,
+            },
+          }}
+          disableFuture
+          format="DD/MM/YYYY"
+          value={value}
+          onChange={(newValue) => onChange(newValue)}
+        />
+      )}
+    />
   );
 }
