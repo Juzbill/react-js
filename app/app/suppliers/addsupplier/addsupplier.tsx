@@ -34,7 +34,7 @@ const Addsupplier: React.FC = () => {
   }
   const handleClose = () => {
     setIsVisible(false);
-    router.push("/app/parties/customers")
+    router.push("/app/suppliers")
   };
   const [gstin, setGstin] = useState('');
   const [isValidGST, setIsValidGST] = useState(true);
