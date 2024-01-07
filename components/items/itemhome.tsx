@@ -93,16 +93,16 @@ const ItemHome: React.FC = () => {
 
   return (
     <div className=" w-[100%]">
-    <div className="px-5 py-2 w-[88%] rounded-md bg-slate-250  flex text-base md:text-lg bg-white ml-4">
+    <div className="px-5 py-2 gap-8 w-[88%] rounded-md bg-slate-250  flex text-base md:text-lg bg-white ml-4">
       <Link
         className="text-green-500 hover:underline mr-4"
         href={"/"}
       >
         Products
       </Link>
-      <Link className="mr-4"  href={"/"}> Services </Link>
-      <Link className="mr-4"  href={"/"}> Category </Link>
-      <Link className="mr-4"  href={"/"}> Units </Link>
+      <Link className="mr-4"  href={"/app/items/serviceitem"}> Services </Link>
+      <Link className="mr-4"  href={"/app/items/category"}> Category </Link>
+      <Link className="mr-4"  href={"/app/items/unit"}> Units </Link>
 
     </div>
      <div className="flex flex-row">
@@ -167,7 +167,7 @@ const ItemHome: React.FC = () => {
 </div>
 <div className=" flex flex-row mt-3 ml-10 w-[60%] h-auto rounded-md bg-slate-250 text-base md:text-lg bg-white">
 <div className="w-[88%] h-[27%] rounded-md mt-5 ml-10 rounded-md border  border-solid border-yellow-300 border-opacity-50 bg-yellow-200 bg-opacity-30">
-    <Box className="sup-profile" sx={{width: '648px',height: '47px',marginTop:'35px', background: 'rgba(255, 237, 213, 0.60)',border: '0.5px solid rgba(248, 200, 136, 0.50)', display:'flex'}}>
+    <Box className="sup-profile" sx={{width: '648px',height: '47px',marginTop:'20px', background: 'rgba(255, 237, 213, 0.60)',border: '0.5px solid rgba(248, 200, 136, 0.50)', display:'flex'}}>
     <List>
     {recentquantity.map((recent,index)=>(
       <ListItem key={index}>
@@ -216,9 +216,12 @@ const ItemHome: React.FC = () => {
       </Box>
       ))}
       </List>
-  
     </Box>
-  </div>
+    <Button onClick={() => router.push("/app/items/adjustitems")}variant="contained" sx={{fontSize:'12px', fontWeight:'400', marginLeft:'468px', position:'relative', marginTop:'-90px'}}>
+              Adjust Item
+              </Button>
+    
+                </div>
 </div>
   </div>
   <Dialog open={openDialog} onClose={handleCloseDialog} sx={{  width: '80%' }}>
@@ -390,28 +393,9 @@ const ItemHome: React.FC = () => {
         </FormControl>
         </Box>
         </Box>}
-      {value === 2 && <Box className="add-gst-form" sx={{marginTop:"35px", marginLeft:'26px', color:'#666'}}>
-        <FormControl>
-      <FormGroup row>
-        <Checkbox />
-        <TextField label="Additional Field 1 Name" sx={{ width: '300px',padding:'4px' }} InputProps={{style:{height:"40px"}}} /> 
-      </FormGroup>
-      <FormGroup row>
-        <Checkbox />
-        <TextField label="Additional Field 2 Name" sx={{ width: '300px',padding:'4px' }} InputProps={{style:{height:"40px"}}} /> 
-      </FormGroup>
-      <FormGroup row>
-        <Checkbox />
-        <TextField label="Additional Field 3 Name" sx={{ width: '300px',padding:'4px' }} InputProps={{style:{height:"40px"}}} /> 
-      </FormGroup>
-      <FormGroup row>
-        <Checkbox />
-        <TextField label="Additional Field 4 Name" sx={{ width: '300px',padding:'4px' }} InputProps={{style:{height:"40px"}}} /> 
-      </FormGroup>
-    </FormControl>
-        </Box>}
+      
         <Box className="btn-save" sx={{width: '250px',borderRadius:'4px', height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginLeft:'650px', marginTop:'15px'}}>
-              <Button variant="outlined" sx={{fontSize:'12px', fontWeight:'400'}} onClick={handleclick}>
+        <Button variant="outlined" sx={{fontSize:'12px', fontWeight:'400', marginLeft:'8px'}}>
               Save & New
               </Button>
               <Button variant="contained" sx={{fontSize:'12px', fontWeight:'400', marginLeft:'8px'}}>

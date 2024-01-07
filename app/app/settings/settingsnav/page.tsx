@@ -1,10 +1,11 @@
 import * as React from "react";
-import Settings from "@/components/Parties/Customers/setting/settings";
+// import Settings from "@/components/Parties/Customers/setting/settings";
+import SettingSidebar from "@/components/Parties/Customers/setting/settingBar";
 
 export interface IpageProps {}
 
 export default function page(props: IpageProps) {
   return <div>      
-    <Settings/>
+    <SettingSidebar/>
   </div>;
 }
