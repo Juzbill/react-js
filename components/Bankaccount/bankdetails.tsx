@@ -67,6 +67,7 @@ const BankDetails = () => {
       >
     <Typography sx={{ fontSize: '12px', fontWeight: '400', color: 'white', }}>Add Bank</Typography>
 
+
       </Button>
     </div>
     </div>

@@ -400,7 +400,7 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
           </Collapse>
           {/* PURCHASE END */}
           <ListItem disablePadding>
-            <ListItemButton onClick={() => router.push("/app/expenes")}>
+            <ListItemButton onClick={() => router.push("/app/expense/home")}>
               <ListItemIcon>
                 <AccountBalanceWalletIcon style={{ color: "#FFFFFF" }} />
               </ListItemIcon>

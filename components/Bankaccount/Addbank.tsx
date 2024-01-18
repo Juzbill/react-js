@@ -33,19 +33,19 @@ const BankAccount: React.FC = () => {
   });
 
   return (
-    <div className="w-[100%]">
-    <div className="px-5 py-1 rounded-md bg-slate-250 flex text-base md:text-lg bg-white ml-4">
-    <div className="items-center justify-center">
 
-      <Button
-        variant="contained"
-        color="primary"
-        startIcon={<AddIcon />}
-        style={{ backgroundColor: 'red' }}
-        onClick={handleButtonClick}
-      >
-        Add Bank Account
-      </Button>
+    <div className="w-100% flex h-screen items-center justify-center ml-72">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Add Your Bank Account Here</h1>
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<AddIcon />}
+          style={{ backgroundColor: 'red' }}
+          onClick={handleButtonClick}
+        >
+          Add Bank Account
+        </Button>
       </div>
       <Dialog open={openDialog} onClose={handleCloseDialog}  sx={{ width: '90%', maxWidth: 'none' }} >
         <DialogContent>
@@ -109,7 +109,7 @@ const BankAccount: React.FC = () => {
         </Dialog>
   
     </div>
-  </div>
+  
   );
 };
 
