@@ -7,9 +7,11 @@ import {
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import AddIcon from '@mui/icons-material/Add';
+import { useRouter } from 'next/navigation';
 
 
 const EstimateHome = () => {
+  const router = useRouter();
     return ( 
         
     <div className=" w-[90%]">
@@ -64,6 +66,7 @@ const EstimateHome = () => {
         color="primary"
         startIcon={<AddIcon />}
         // onClick={handleButtonClick}
+        onClick={() => router.push("/app/estimate/addestimate")}
       >
     <Typography sx={{ fontSize: '12px', fontWeight: '400', color: 'white', }}>Add Estimate</Typography>
 

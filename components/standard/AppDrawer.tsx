@@ -312,7 +312,7 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
               </ListItemButton>
               <ListItemButton
                 sx={{ pl: 2 }}
-                onClick={() => router.push("/app/sales")}
+                onClick={() => router.push("/app/sales/saleorder")}
               >
                 <ListItemIcon>
                   <StarBorder />
@@ -330,7 +330,7 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
               </ListItemButton>
               <ListItemButton
                 sx={{ pl: 2 }}
-                onClick={() => router.push("/app/sales")}
+                onClick={() => router.push("/app/salereturn")}
               >
                 <ListItemIcon>
                   <StarBorder />
