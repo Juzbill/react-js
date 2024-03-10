@@ -3,7 +3,7 @@ import { Grid, Paper, Typography , Box, FormControl, FormGroup, Checkbox, TextFi
 import CloseIcon from '@mui/icons-material/Close';
 import React, { useState } from 'react';
 import { useRouter } from "next/navigation";
-
+import { usePartyContext } from "../setting/PartyContext";
 
 
 
@@ -11,21 +11,18 @@ const Settings: React.FC = () => {
   const router=useRouter()
   const [isVisible, setIsVisible] = useState(true);
   
-  const handleClose = () => {
-    setIsVisible(false);
-    router.push("/app/parties/customers/addcustomer")
-  };
+  const { togglePartyGroup } = usePartyContext();
 
   return (
-    <Paper sx={{width:'980px',height:'610px'}}>
+    <Paper sx={{width:'980px',height:'610px', marginTop:'20px'}}>
          <Grid container spacing={3}>
       {/* Left Section */}
-      <Grid item xs={5} sx={{ marginTop:'20px'}}>
+      <Grid item xs={5} sx={{ marginTop:'10px'}}>
           <Typography variant="h6" sx={{marginLeft:'30px',borderBottom: '1px solid var(--line-Color, #E6E6E6)',paddingBottom: '10px', paddingLeft: '10px'}}>Party Settings</Typography>
           <Box className="setting-form" sx={{marginTop:"35px", marginLeft:'26px', color:'#666'}}>
         <FormControl>
       <FormGroup row>
-        <Checkbox />
+        <Checkbox onChange={togglePartyGroup} />
         <Typography sx={{marginTop:'8px'}} > Party Grouping</Typography>
       </FormGroup>
       <FormGroup row>
@@ -42,7 +39,7 @@ const Settings: React.FC = () => {
       </Grid>
 
       {/* Right Section */}
-      <Grid item xs={5} sx={{marginTop:'20px'}}>
+      <Grid item xs={5} sx={{marginTop:'10px'}}>
           <Typography variant="h6" sx={{borderBottom: '1px solid var(--line-Color, #E6E6E6)',paddingBottom: '10px', paddingLeft: '10px'}}>Addtional Fields</Typography>        
           
       <Box className="settings-form" sx={{marginTop:"35px", marginLeft:'26px', color:'#666'}}>
@@ -67,11 +64,7 @@ const Settings: React.FC = () => {
     </FormControl>
         </Box>
       </Grid>
-      <Grid item xs={1} sx={{marginTop:'20px'}}>
-      <Box className="closeicon"sx={{marginLeft:'35px'}}>
-        <CloseIcon sx={{ fontSize: 25, color: '#666' }} onClick={handleClose} />
-        </Box>
-        </Grid>
+      
     </Grid>
     </Paper>
   

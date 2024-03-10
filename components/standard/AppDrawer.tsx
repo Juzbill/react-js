@@ -400,7 +400,7 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
           </Collapse>
           {/* PURCHASE END */}
           <ListItem disablePadding>
-            <ListItemButton onClick={() => router.push("/app/expenes")}>
+            <ListItemButton onClick={() => router.push("/app/expense/home")}>
               <ListItemIcon>
                 <AccountBalanceWalletIcon style={{ color: "#FFFFFF" }} />
               </ListItemIcon>
@@ -421,7 +421,7 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
             <List component="div" disablePadding>
               <ListItemButton
                 sx={{ pl: 2 }}
-                onClick={() => router.push("/app/sales")}
+                onClick={() => router.push("/app/bankdetails")}
               >
                 <ListItemIcon>
                   <span style={{ marginRight: "16px" }}>+</span>
@@ -430,7 +430,7 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
               </ListItemButton>
               <ListItemButton
                 sx={{ pl: 2 }}
-                onClick={() => router.push("/app/sales")}
+                onClick={() => router.push("/app/bankdetails")}
               >
                 <ListItemIcon>
                   <StarBorder />

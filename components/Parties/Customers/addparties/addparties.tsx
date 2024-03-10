@@ -21,9 +21,11 @@ import { useRouter } from "next/navigation";
 
 
 
+
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 const Addparties: React.FC = () => {
+
   const router=useRouter()
   const [value, setValue] = useState(0);
   const handleChange = (event:any, newValue:any) => {
@@ -143,7 +145,7 @@ const Addparties: React.FC = () => {
        </FormControl>
         </Box>
         <FormControl sx={{padding:"8px", marginLeft:'22px'}}>
-        <TextField label="Party Group" variant="outlined" sx={{ width: '270px',padding:'4px' }} InputProps={{style:{height:"40px"}}}  />
+        <TextField label="Party Group" variant="outlined"  sx={{ width: '270px',padding:'4px' }} InputProps={{style:{height:"40px"}}}  />
        </FormControl>
 
       <Tabs
