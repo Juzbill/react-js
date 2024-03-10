@@ -25,6 +25,7 @@ import AddIcon from "@mui/icons-material/Add";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import SettingsIcon from "@mui/icons-material/Settings";
+import PaymentIcon from '@mui/icons-material/Payment';
 import {
   Avatar,
   Button,
@@ -458,6 +459,30 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
             </List>
           </Collapse>
           {/* BANKING END */}
+           {/* ESTIMATE */}
+           <ListItem disablePadding>
+            <ListItemButton
+              onClick={() => router.push("/app/estimate")}
+            >
+              <ListItemIcon>
+                {/* <SettingsIcon style={{ color: "#FFFFFF" }} /> */}
+              </ListItemIcon>
+              <ListItemText primary={"Estimate"} />
+            </ListItemButton>
+          </ListItem>
+          {/* ESTIMATE END */}
+           {/* PAYMENT */}
+           <ListItem disablePadding>
+            <ListItemButton
+              onClick={() => router.push("/app/payment")}
+            >
+              <ListItemIcon>
+                <PaymentIcon style={{ color: "#FFFFFF" }} />
+              </ListItemIcon>
+              <ListItemText primary={"Payment"} />
+            </ListItemButton>
+          </ListItem>
+          {/* PAYMENT END */}
           {/* SETTINGS */}
           <ListItem disablePadding>
             <ListItemButton
@@ -470,6 +495,7 @@ export default function AppDrawerLeft({ onCompanyClick }: IAppDrawerLeft) {
             </ListItemButton>
           </ListItem>
           {/* SETTINGS END */}
+          
         </List>
       </Drawer>
     </Box>
